@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TodoTech Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.css">
+</head>
+
+<body background="Images/fondoVentas.jpg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">TodoTech Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inventario.html">Sistema de inventario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="finanzas.html">Sistema de finanzas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron" style="margin-left: 5rem; margin-right: 5rem; margin-top: 5rem;">
+        <h1 class="display-3">¡Bienvenido!</h1>
+        <p class="lead">Ingrese los datos del cliente en esta ventana.</p>
+        <hr class="my-4">
+        <form>
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Ingrese el nombre y apellido del cliente">
+                        <label for="exampleInputEmail1">Telefono</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Ingrese el telefono del cliente">
+                        <label for="exampleInputEmail1">Dirección</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Ingrese la dirección de residencia del cliente">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5">
+                    <label for="exampleInputEmail1">Cedula</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Ingrese la cedula del cliente">
+                    <label for="exampleInputEmail1">Correo electronico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Ingrese el correo electronico del cliente">
+                    <label for="exampleInputPassword1">Clave secreta</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Clave secreta">
+
+                </div>
+            </div>
+        </form>
+        <p>Recuerde mencionar que esta informacion se encuentra protegida por "La Ley de Protección de Datos Personales"
+            y solo será usada con fines de control y gestión de la organización.</p>
+    </div>
+
+    <div style="margin-left: 7rem; margin-right: 7rem;">
+        <h5>Carrito de compras:</h5>
+        <table class="table table-hover">
+            <thead id="id-tabla">
+                <tr class="table-light">
+                    <th scope="row">Producto</th>
+                    <td>Categoría</td>
+                    <td>Cantidad</td>
+                    <td>Precio</td>
+                    <td>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom"
+                            title="Elimina el producto" style="width: 7.2rem;">Eliminar</button>
+                    </td>
+                </tr>
+                <tr id="tabla">
+                    <th id="tabla-producto-${cont}">Monitor gamer</th>
+                    <td id="tabla-precio-${cont}">320000</td>
+                    <td id="tabla-cantidad-${cont}">1</td>
+                    <td id="tabla-precio unidad-${cont}">120000</td>
+                    <td>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom"
+                            title="Elimina el producto" style="width: 7.2rem;">Eliminar</button>
+                    </td>
+                </tr>
+                <tr id="tabla">
+                    <th id="tabla-producto-${cont}">Teclado gamer</th>
+                    <td id="tabla-precio-${cont}">40000</td>
+                    <td id="tabla-cantidad-${cont}">1</td>
+                    <td id="tabla-precio unidad-${cont}">40000</td>
+                    <td>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom"
+                            title="Elimina el producto" style="width: 7.2rem;">Eliminar</button>
+                    </td>
+                </tr>
+                <tr id="tabla">
+                    <th id="tabla-producto-${cont}">Mause gamer</th>
+                    <td id="tabla-precio-${cont}">40000</td>
+                    <td id="tabla-cantidad-${cont}">1</td>
+                    <td id="tabla-precio unidad-${cont}">40000</td>
+                    <td>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom"
+                            title="Elimina el producto" style="width: 7.2rem;">Eliminar</button>
+                    </td>
+                </tr>
+                <tr id="tabla">
+                    <th id="tabla-producto-${cont}">Silla gamer</th>
+                    <td id="tabla-precio-${cont}">100000</td>
+                    <td id="tabla-cantidad-${cont}">1</td>
+                    <td id="tabla-precio unidad-${cont}">100000</td>
+                    <td>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom"
+                            title="Elimina el producto" style="width: 7.2rem;">Eliminar</button>
+                    </td>
+                </tr>
+        </table>
+
+    </div>
+
+    <div class="form-group" style="margin-left: 7rem; max-width: 20rem;">
+        <label for="exampleSelect1">categorías</label>
+        <select class="form-control" id="categorias">
+            <option>Todas</option>
+            <option>Impresoras</option>
+            <option>Computadores</option>
+            <option>Accesorios</option>
+            <option>Repuestos</option>
+        </select>
+    </div>
+
+    <div class="row" style="margin-top: 2rem; margin-left: 6rem; margin-right: 3rem; margin-bottom: 10rem;">
+
+        <div class="col-xs-12 col-sm-4">
+
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Producto 1</div>
+                <div class="card-body">
+                    <img src="/Images/ProductoGenerico.png">
+                    <p class="card-text">Descripción.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                <label class="custom-control-label" for="customSwitch1">Agregar</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="form-group">
+                                <label for="exampleSelect1">Cantidad</label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Producto 4</div>
+                <div class="card-body">
+                    <img src="/Images/ProductoGenerico.png">
+                    <p class="card-text">Descripción.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                <label class="custom-control-label" for="customSwitch1">Agregar</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="form-group">
+                                <label for="exampleSelect1">Cantidad</label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Producto 2</div>
+                <div class="card-body">
+                    <img src="/Images/ProductoGenerico.png">
+                    <p class="card-text">Descripción.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                <label class="custom-control-label" for="customSwitch1">Agregar</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="form-group">
+                                <label for="exampleSelect1">Cantidad</label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Producto 5</div>
+                <div class="card-body">
+                    <img src="/Images/ProductoGenerico.png">
+                    <p class="card-text">Descripción.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                <label class="custom-control-label" for="customSwitch1">Agregar</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="form-group">
+                                <label for="exampleSelect1">Cantidad</label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Producto 3</div>
+                <div class="card-body">
+                    <img src="/Images/ProductoGenerico.png">
+                    <p class="card-text">Descripción.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                <label class="custom-control-label" for="customSwitch1">Agregar</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="form-group">
+                                <label for="exampleSelect1">Cantidad</label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Producto 6</div>
+                <div class="card-body">
+                    <img src="/Images/ProductoGenerico.png">
+                    <p class="card-text">Descripción.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                <label class="custom-control-label" for="customSwitch1">Agregar</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="form-group">
+                                <label for="exampleSelect1">Cantidad</label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row" style="margin-bottom: 5rem; margin-left: 5rem; margin-right: 5rem ;">
+
+        <div class="col-xs-12 col-sm-6">
+            <button type="button" class="btn btn-success btn-lg btn-block">Realizar la compra</button>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <button type="button" class="btn btn-success btn-lg btn-block">Cancelar la compra</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

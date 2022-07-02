@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TodoTech Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">TodoTech Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inventario.html">Sistema de inventario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="finanzas.html">Sistema de finanzas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron" style="margin-top: 5rem; margin-left: 5rem; margin-right: 5rem;">
+        <h1 class="display-3">Finanzas</h1>
+        <p class="lead">En esta página encontrará las herramientas necesarias para gestionar correctamente las finanzas
+            de su organización
+        </p>
+        <hr class="my-4">
+
+        <table class="table table-hover">
+            <thead id="id-tabla">
+                <tr class="table-light">
+                    <th scope="row">Venta</th>
+                    <td>Cliente</td>
+                    <td>Total</td>
+                    <td>Fecha</td>
+                </tr>
+
+                <tr id="tabla">
+                    <th id="tabla-producto-${cont}">1</th>
+                    <td id="tabla-categoria-${cont}">Hernar Perez</td>
+                    <td id="tabla-cantidad-${cont}">500000</td>
+                    <td id="tabla-precio-${cont}">06/04/2021</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                            <button onclick="" type="button" class="btn btn-success" data-toggle="modal"
+                                data-target="#miModal">Eliminar</button>
+                            <div class="btn-group" role="group">
+                                <button onclick="" id="consultar" type="button" class="btn btn-success dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                                    <a class="dropdown-item" href="#" data-toggle="modal"
+                                        data-target="#miModal">Consultar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+
+        </table>
+
+        <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Información de la venta</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Cliente: Hernar Perez</p>
+                        <p>Productos vendidos el: 06/04/2021</p>
+                        <p>Monto total de la venta: 500000</p>
+                        <table class="table table-hover">
+                            <tr class="table-success">
+                                <th scope="row">Producto</th>
+                                <td>Precio</td>
+                                <td>Cantidad</td>
+                                <td>Precio unidad</td>
+                              </tr>
+    
+                              <tr id="tabla">
+                                <th id="tabla-producto-${cont}">Monitor gamer</th>
+                                <td id="tabla-precio-${cont}">320000</td>
+                                <td id="tabla-cantidad-${cont}">1</td>
+                                <td id="tabla-precio unidad-${cont}">120000</td>
+                              </tr>
+                              <tr id="tabla">
+                                <th id="tabla-producto-${cont}">Teclado gamer</th>
+                                <td id="tabla-precio-${cont}">40000</td>
+                                <td id="tabla-cantidad-${cont}">1</td>
+                                <td id="tabla-precio unidad-${cont}">40000</td>
+                              </tr>
+                              <tr id="tabla">
+                                <th id="tabla-producto-${cont}">Mause gamer</th>
+                                <td id="tabla-precio-${cont}">40000</td>
+                                <td id="tabla-cantidad-${cont}">1</td>
+                                <td id="tabla-precio unidad-${cont}">40000</td>
+                              </tr>
+                              <tr id="tabla">
+                                <th id="tabla-producto-${cont}">Silla gamer</th>
+                                <td id="tabla-precio-${cont}">100000</td>
+                                <td id="tabla-cantidad-${cont}">1</td>
+                                <td id="tabla-precio unidad-${cont}">100000</td>
+                              </tr>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDlbk96qJn6sAXCHtJ91snwe-yRK6oHa2c",
+      authDomain: "proyectosoftware-58a28.firebaseapp.com",
+      projectId: "proyectosoftware-58a28",
+      storageBucket: "proyectosoftware-58a28.appspot.com",
+      messagingSenderId: "681725015479",
+      appId: "1:681725015479:web:b69fc322351cad30556432"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+    <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://bootswatch.com/_assets/js/custom.js"></script>
+
+    <script src="Finanzas.js"></script>
+</body>
+
+</html>

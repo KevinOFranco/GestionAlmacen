@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inventario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">TodoTech Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inventario.html">Sistema de inventario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="finanzas.html">Sistema de finanzas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron" style="margin-top: 5rem; margin-left: 5rem; margin-right: 5rem;">
+        <h1 class="display-3">Inventario</h1>
+        <p class="lead">En esta página encontrará las herramientas necesarias para gestionar correctamente el inventario
+            de su organización
+        </p>
+        <hr class="my-4">
+
+        <table class="table table-hover">
+            <thead id="id-tabla">
+                <tr class="table-light">
+                    <th scope="row">Producto</th>
+                    <td>Categoría</td>
+                    <td>Cantidad disponible</td>
+                    <td>Precio</td>
+                    <td>
+                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom"
+                            title="Agrega un nuevo producto" style="width: 7.2rem;"
+                            onclick="location.href='addProduct.html'">Agregar</button>
+                    </td>
+                </tr>
+        </table>
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>    
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDlbk96qJn6sAXCHtJ91snwe-yRK6oHa2c",
+      authDomain: "proyectosoftware-58a28.firebaseapp.com",
+      projectId: "proyectosoftware-58a28",
+      storageBucket: "proyectosoftware-58a28.appspot.com",
+      messagingSenderId: "681725015479",
+      appId: "1:681725015479:web:b69fc322351cad30556432"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+    <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://bootswatch.com/_assets/js/custom.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

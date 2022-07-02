@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TodoTech Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.css">
+</head>
+
+<body background="Images/fondo.jpg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">TodoTech Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inventario.html">Sistema de inventario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="finanzas.html">Sistema de finanzas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="row" style="margin-top: 10rem; margin-right: 5rem; margin-left: 7rem;">
+        <div class="col-xs-12 col-sm-6">
+
+            <button type="button" class="btn btn-link btn-lg btn-block" onclick="location.href='venta.html'">
+                <div class="card text-white bg-success mb-3" style="max-width: 30rem;">
+                    <div class="card-header">Catalogo de productos</div>
+                    <div class="card-body">
+                        <img src="/Images/catalogo.png">
+                        <h4 class="card-title">¡Hora de vender!</h4>
+                        <p class="card-text">Aquí encontrará un catalogo con todos sus productos.</p>
+                    </div>
+                </div>
+            </button>
+
+        </div>
+        <div class="col-xs-12 col-sm-6">
+
+            <button type="button" class="btn btn-link btn-lg btn-block">
+                <div class="card text-white bg-success mb-3" style="max-width: 30rem;">
+                    <div class="card-header">Cierre de caja</div>
+                    <div class="card-body">
+                        <img src="/Images/cierreCaja.png">
+                        <h4 class="card-title">¿Cuanto gano?</h4>
+                        <p class="card-text">Aquí encontrará las ventas que se hicieron hoy.</p>
+                    </div>
+                </div>
+            </button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

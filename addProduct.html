@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crea un producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">TodoTech Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inventario.html">Sistema de inventario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="finanzas.html">Sistema de finanzas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron" style="margin-top: 5rem; margin-left: 10rem; margin-right: 10rem;">
+        <h1 class="display-3">
+            <H1>Cree su producto</h1>
+            <p class="lead">
+                En la siguiente página puede crear un producto</p>
+            <hr class="my-4">
+
+            <div class="row">
+
+                <div style="width: 30rem;">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputDefault">Nombre</label>
+                        <input type="text" class="form-control" placeholder="Ejemplo: Portatil" id="input-nombre">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputDefault">Categoría</label>
+                        <input type="text" class="form-control" placeholder="Ejemplo: Computadores"
+                            id="input-categoria">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputDefault">Cantidad disponible</label>
+                        <input type="text" class="form-control" placeholder="Ejemplo: 25" id="input-cantidad">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputDefault">Precio</label>
+                        <input type="text" class="form-control" placeholder="Ejemplo: 1500000" id="input-precio">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile">Imagenes</label>
+                        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                        <small id="fileHelp" class="form-text text-muted">Ingrese una fotografia del
+                            producto.</small>
+                    </div>
+                </div>
+
+                <div style="margin-left: 10rem; margin-top: 3rem;">
+                    <img src="Images/estar.png">
+                </div>
+
+            </div>
+
+
+            <div class="contenedor-modal">
+                <button id="id-guardar" onclick="guardar()" type="button" class="btn btn-primary btn-lg"
+                    data-toggle="modal" data-target="#miModal">Guardar</button>
+            </div>
+
+            <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">¡Atención!</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Producto guardado con exito
+                        </div>
+                        <div class="modal-body">
+                            <button type="button" style="margin-left: 8rem; width: 12rem;" class="btn btn-success"
+                                onclick="location.href='inventario.html'">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <!-- Lo de Firebase, no tocar! -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD3uK3vLB0QlL2UwiG6QkpzuwgcN4CV7Ek",
+            authDomain: "biblioteca-c609f.firebaseapp.com",
+            databaseURL: "https://biblioteca-c609f-default-rtdb.firebaseio.com",
+            projectId: "biblioteca-c609f",
+            storageBucket: "biblioteca-c609f.appspot.com",
+            messagingSenderId: "830505066464",
+            appId: "1:830505066464:web:ec83089dc6ecefdcd65585"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://bootswatch.com/_assets/js/custom.js"></script>
+
+    <script src="add.js"></script>
+</body>
+
+</html>
